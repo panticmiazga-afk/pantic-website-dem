@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RxNova Soap Production</title>
+  <meta name="description" content="RxNova — handcrafted, natural soaps. Learn our process, view products, and contact us.">
+  <!-- Favicon placeholder -->
+  <!-- <link rel="icon" href="images/favicon.ico"> -->
+
+  <style>
+    /* ===== RxNova - Simple Clean Styles (embedded for easy copy) ===== */
+    :root{
+      --accent:#2b8a78;
+      --accent-2:#14575a;
+      --muted:#6b7280;
+      --bg:#fbfbfd;
+      --card:#ffffff;
+      --radius:12px;
+      --max-width:1100px;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.5}
+    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:48px;height:48px;object-fit:contain;border-radius:8px}
+    .brand h1{font-size:1.1rem;margin:0}
+    nav a{margin-left:14px;color:var(--accent-2);text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:28px 0}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95));padding:26px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(15,23,42,0.06)}
+    .hero h2{margin:0 0 12px;font-size:1.8rem}
+    .hero p{margin:0 0 16px;color:var(--muted)}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none}
+    .hero-img{border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+    .hero-img img{width:100%;height:100%;display:block;object-fit:cover}
+
+    /* Products */
+    .section{margin:42px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    .card h3{margin:12px 0 6px;font-size:1.05rem}
+    .card p{margin:0;color:var(--muted);font-size:0.92rem}
+    .price{font-weight:700;color:var(--accent-2);margin-top:10px}
+
+    /* Process steps */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .step{background:linear-gradient(180deg,#fff,#fff);padding:18px;border-radius:10px;border:1px solid #f0f0f2}
+    .step h4{margin:0 0 8px}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    form{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.03)}
+    label{display:block;font-size:0.85rem;margin-bottom:6px;color:var(--muted)}
+    input[type="text"], input[type="email"], textarea, select{
+      width:100%;padding:10px;border-radius:8px;border:1px solid #e6e7eb;margin-bottom:12px;font-size:0.95rem
+    }
+    button{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+
+    footer{margin:40px 0 12px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      nav{display:none}
+      .grid{grid-template-columns:1fr}
+      .brand h1{font-size:1rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="My HTML Project/images/logo.jpeg" alt="RxNova logo" onerror="this.style.display='none'">
+        <div>
+          <h1>RxNova</h1>
+          <div style="font-size:0.85rem;color:var(--muted)">Handcrafted Soap Production</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-card">
+        <h2>Natural, Sustainable, Rx-quality Soaps</h2>
+        <p>At RxNova we blend science and nature to produce gentle, effective soaps — made with carefully selected oils and sustainable production practices.</p>
+        <a class="cta" href="#products">See Products</a>
+      </div>
+
+      <div class="hero-img">
+        <img src="images/hero.jpg" alt="Soap bars" onerror="this.style.background='#eee';height:220px;display:block;">
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section">
+      <h2>Our Products</h2>
+      <p style="color:var(--muted)">Quality soaps for skin care, laundry, and specialty blends.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <article class="card">
+          <img src="images/product1.jpg" alt="Gentle Olive Soap">
+          <h3>Gentle Olive Soap</h3>
+          <p>Moisturizing cold-processed soap made with extra virgin olive oil. For everyday use and sensitive skin.</p>
+          <div class="price">KSh 250 / bar</div>
+        </article>
+
+        <article class="card">
+          <img src="images/product2.jpg" alt="Coconut Lather">
+          <h3>Coconut Lather</h3>
+          <p>High-foaming coconut oil soap for deep cleaning with a fresh citrus scent.</p>
+          <div class="price">KSh 220 / bar</div>
+        </article>
+
+        <article class="card">
+          <img src="images/product1.jpg" alt="Herbal Turmeric">
+          <h3>Herbal Turmeric</h3>
+          <p>Turmeric and neem extract soap with gentle antiseptic properties — ideal for troubled skin.</p>
+          <div class="price">KSh 280 / bar</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section">
+      <h2>Our Production Process</h2>
+      <p style="color:var(--muted)">Transparent, standardised steps to ensure quality and safety.</p>
+
+      <div class="steps" style="margin-top:12px">
+        <div class="step">
+          <h4>1. Sourcing</h4>
+          <p>We procure high-grade oils and raw materials from verified suppliers.</p>
+        </div>
+        <div class="step">
+          <h4>2. Formulation</h4>
+          <p>Precise saponification calculations and small-scale trials ensure consistent bars.</p>
+        </div>
+        <div class="step">
+          <h4>3. Production</h4>
+          <p>Cold process saponification under controlled conditions, followed by curing and QC.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact & Orders</h2>
+      <p style="color:var(--muted)">Reach out for bulk orders, custom scents, or quality specs.</p>
+
+      <div class="contact-grid" style="margin-top:12px">
+        <!-- Info -->
+        <div class="card" style="display:flex;flex-direction:column;gap:8px">
+          <h3>RxNova HQ</h3>
+          <p style="margin:0;color:var(--muted)">Nairobi, Kenya</p>
+          <p style="margin-top:8px"><strong>Email</strong><br>info@rxnova.example</p>
+          <p><strong>Phone</strong><br>+254 700 000000</p>
+          <p style="margin-top:6px;color:var(--muted);font-size:0.9rem">Note: For orders, include product name, quantity, and delivery address.</p>
+        </div>
+
+        <!-- Contact Form (non-functional placeholder) -->
+        <form onsubmit="event.preventDefault(); alert('Thank you! This is a demo form — connect it to a server or email service to accept messages.');">
+          <label for="name">Full name</label>
+          <input id="name" type="text" placeholder="Your name" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required>
+
+          <label for="message">Message / Order details</label>
+          <textarea id="message" rows="5" placeholder="Tell us what you need" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> RxNova — Soap Production • <span style="color:var(--muted)">Made with care</span>
+    </footer>
+  </div>
+
+  <script>
+    // Small JS helpers: current year, simple smooth scroll
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for nav anchors (simple)
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>

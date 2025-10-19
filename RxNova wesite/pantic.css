@@ -1,0 +1,62 @@
+/*Global Reset */
+
+* {
+	box-sizing:border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Base Styling */
+
+html {
+	font-size: 16px;
+
+}
+
+body {
+	font-family:Arial, sans-serif;
+	background-color: #f0f0f0;
+	padding: 20px;
+
+}
+
+/* Header */
+
+header {
+	background: steelblue;
+	color: white;
+	text-align: center;
+
+}
+
+/* container */
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-top: 20px;
+}
+
+/* Boxes */
+
+.box {
+	flex:1;
+	background:coral;
+	text-align:center;
+	padding:2em;
+	border-radius: 10px;
+	min-width: 200px;
+}
+
+/* Responsive For Small Screens */
+ 
+ @media (max-width: 768px) {
+ 	.container {
+ 		flex-direction: column;
+ 	}
+
+ 	.box {
+ 		background: lightseagreen;
+ 	}
+ }
